@@ -3,8 +3,6 @@ require('dotenv').config()
 
 const bot = new Discord.Client()
 
-
-
 const token = process.env.API_KEY // use file io later with token.pass to hide token from git
 
 bot.on('ready', () => {
@@ -16,6 +14,8 @@ bot.on('message', msg => {
         msg.reply("hello stoooopid beeep booop bop")
     }
 })
+
+console.log('RUnning')
 
 bot.login(token)
 
