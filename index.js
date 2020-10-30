@@ -1,5 +1,8 @@
 const Discord = require('discord.js')
 require('dotenv').config()
+const express = require('express')
+
+const app = express()
 
 const bot = new Discord.Client()
 
@@ -13,9 +16,13 @@ bot.on('message', msg => {
     if(msg.content === "HELLO"){
         msg.reply("hello stoooopid beeep booop bop")
     }
+    
 })
 
-console.log('RUnning')
+const PORT = process.env.PORT || 3000;
+app.listen(PORT, () => {
+    console.log(`Our app is running on port ${ PORT }`);
+});
 
 bot.login(token)
 
