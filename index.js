@@ -14,7 +14,8 @@ bot.on('ready', () => {
 
 bot.on('message', msg => {
     if(msg.content === "HELLO"){
-        msg.reply("hello stoooopid beeep booop bop")
+        msg.reply("hello stoooopid beeep booop bop \n this messge comes from the organization")
+        
     }
     
 })
