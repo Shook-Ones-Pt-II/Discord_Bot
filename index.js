@@ -12,11 +12,25 @@ bot.on('ready', () => {
     console.log('this bot is online')
 })
 
-bot.on('message', msg => {
+bot.on('message', async (msg) => {
+    //hello world equivalent of discord bot
+    const arr = msg.content.split()
+
     if(msg.content === "HELLO"){
         msg.reply("hello stoooopid beeep booop bop \n this messge comes from the organization")
         
     }
+
+    if(arr[0] === "weather"){
+        const loc = ""
+        for(let i = 1; i < arr.length - 1; i++){
+            loc += arr[i]
+        }
+
+        //loc = await geocode(loc)
+    }
+
+    
     
 })
 
