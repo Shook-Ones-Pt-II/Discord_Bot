@@ -43,6 +43,20 @@ bot.on('message', async msg => {
         //loc = await geocode(loc)
     }
 
+    if(arr.length >= 2){
+        if(arr[0].toLowerCase() == "bitcoin" && arr[1].toLowerCase() == "price"){
+            try{
+
+                const BitPrice = await getDATA.getBitcoin()
+                msg.reply(`${BitPrice.price}$ CAD`)
+
+            }catch(e){
+                console.log(e)
+                msg.reply("Bitcoin price is unavailable at the moment")
+            }
+        } 
+    }
+
     
     
 })
