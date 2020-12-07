@@ -1,5 +1,5 @@
 # Security Policy
-
+:x: pew pew pew pew! security measures deployed!!! Begin attacking all threats. ENGAGE ALL COUNTER MEASURES :x:
 ## Supported Versions
 
 Use this section to tell people about which versions of your project are
