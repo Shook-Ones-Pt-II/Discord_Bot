@@ -23,8 +23,15 @@ It enables users to interact with pre-set messages from the Discord Bot by typin
 * Here to develop cool new features.
 
 ## Commands
-* > HELLO: Greets the user!
-* > HELP: Provides assistance & options in regards to possible commands!
+> **HELLO**: Greets the user!
+
+> **HELP**: Provides assistance & options in regards to possible commands!
+
+> **BITCOIN PRICE**: Returns the current price of bitcoin in Canadian currency ($)!
+
+> **WEATHER <_location_>**: Displays the temperature & precipitation chances of any location!
+
+> **ON**: If command executed, bot will reply to any of Dan's message with "Shut yo @$$ up!"
 
 ***
 That's it, our project lead hasn't really told us what else to do.
