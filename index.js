@@ -56,6 +56,19 @@ bot.on('message', async msg => {
             }
         } 
     }
+    if(arr.length >= 2){
+        if(arr[0].toLowerCase() == "chuck" && arr[1].toLowerCase() == "norris"){
+            try{
+
+                const ChuckJoke = await getDATA.getChuckNorris()
+                msg.reply(`${ChuckJoke}`)
+
+            }catch(e){
+                console.log(e)
+                msg.reply("Chuck Norris joke not available :/")
+            }
+        } 
+    }
 
     
     
