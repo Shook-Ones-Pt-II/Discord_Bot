@@ -1,6 +1,6 @@
 const fetch = require('node-fetch')
 const facts = async () => {
-    const url = `http://numbersapi.com/#random/year`
+    const url = `http://numbersapi.com/random/year?json`
 
 
     const response = await fetch(url)
