@@ -2,6 +2,8 @@ const forecast = require("./weather/forecast")
 const geocode = require("./weather/geocode")
 const getBitcoin = require("./Bitcoin/coindesk")
 const getChuckNorris = require("./chuck_norris/chucknorris")
+const getHistory = require("./history/facts")
+
 
 const getWeather = async (address) => {
 
@@ -14,4 +16,4 @@ const getWeather = async (address) => {
 }
 
 
-module.exports = {getWeather, getBitcoin, getChuckNorris}
+module.exports = {getWeather, getBitcoin, getChuckNorris, getHistory}
