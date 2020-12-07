@@ -71,7 +71,7 @@ bot.on('message', async msg => {
     }
     if(msg.content === "history"){
         try{
-             const historyFact = await getDATA.getHistory()
+            const historyFact = await getDATA.getHistory()
             msg.reply(`${historyFact}`)
 
         }catch(e){
