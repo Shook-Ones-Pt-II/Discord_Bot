@@ -61,7 +61,7 @@ bot.on('message', async msg => {
             try{
 
                 const ChuckJoke = await getDATA.getChuckNorris()
-                msg.reply(`${ChuckJoke}`)
+                msg.reply(`${ChuckJoke.value}`)
 
             }catch(e){
                 console.log(e)
