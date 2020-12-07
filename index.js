@@ -12,7 +12,10 @@ bot.on('ready', () => {
     console.log('this bot is online')
 })
 
+let annoying = false
+
 bot.on('message', async msg => {
+
 
     let arr = msg.content.split(" ")
     if(msg.content === "HELLO"){
@@ -68,6 +71,21 @@ bot.on('message', async msg => {
                 msg.reply("Chuck Norris joke not available :/")
             }
         } 
+    }
+
+    
+
+    if(msg.content == "on" && msg.author.username == "iggy"){
+        annoying = true
+    }
+    if(msg.content == "off" && msg.author.username == "iggy"){
+        annoying = false
+    }
+
+
+
+    if(msg.author.username == "bishcona" && annoying){
+        msg.reply("shut yoo a#! up dawg!")
     }
 
     
