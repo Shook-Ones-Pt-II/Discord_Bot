@@ -33,5 +33,7 @@ It enables users to interact with pre-set messages from the Discord Bot by typin
 
 > **ON**: If command executed, bot will reply to any of Dan's message with "Shut yo @$$ up!"
 
+> **HISTORY**: Returns a history fact that occurred during random year!
+
 ***
 That's it, our project lead hasn't really told us what else to do.
