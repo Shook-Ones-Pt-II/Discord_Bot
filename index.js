@@ -72,7 +72,16 @@ bot.on('message', async msg => {
             }
         } 
     }
+    if(msg.content === "history"){
+        try{
+            const historyFact = await getDATA.getHistory()
+            msg.reply(`${historyFact}`)
+        }catch(e){
+            console.log(e)
+            msg.reply("Looks like history was cleared from existence. Naughty naughty...")
+        }
 
+    }
     
 
     if(msg.content == "on" && msg.author.username == "iggy"){
@@ -87,8 +96,7 @@ bot.on('message', async msg => {
     if(msg.author.username == "bishcona" && annoying){
         msg.reply("shut yoo a#! up dawg!")
     }
-
-    
+     
     
 })
 
