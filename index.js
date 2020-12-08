@@ -93,9 +93,19 @@ bot.on('message', async msg => {
             console.log(e)
             msg.reply("Been a bad dog. Straight to jail!")
         }
+    }
+
+    if(msg.content === "bored"){
+        try{
+            const dogPicture = await getDATA.getBored()
+            msg.reply(`${dogPicture.activity}`)
+
+        }catch(e){
+            console.log(e)
+            msg.reply("Sorry buddy, you're gonna have to stay bored")
+        }
 
     }
-    
 
     if(msg.content == "on" && msg.author.username == "iggy"){
         annoying = true
@@ -107,9 +117,12 @@ bot.on('message', async msg => {
 
 
     if(msg.author.username == "bishcona" && annoying){
-        msg.reply("shut yoo a#! up dawg!")
+        msg.reply("shut yoo @$$ up dawg!")
     }
-     
+    
+    if(msg.content === "help"){
+       msg.reply("\n\nHELLO: Greets you!\n\ndog: Shares random pictures of dogs\n\non/off: Activates annoy Dan/Stops annoy Dan\n\nbiscona: If annoy Dan is on, will tell dan to shut up\n\nhistory: Shares a random history fact\n\nchuck norris: Shares a random Chuck Norris joke\n\nbitcoin price: Provides current value of bitcoin in canadian currency\n\nweather <location>: Provides the weather for a given location")
+    }
     
 })
 
