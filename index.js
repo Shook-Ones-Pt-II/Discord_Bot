@@ -83,6 +83,18 @@ bot.on('message', async msg => {
         }
 
     }
+
+    if(msg.content === "dog"){
+        try{
+            const dogPicture = await getDATA.getDog()
+            msg.reply(`${dogPicture.url}`)
+
+        }catch(e){
+            console.log(e)
+            msg.reply("Been a bad dog. Straight to jail!")
+        }
+
+    }
     
 
     if(msg.content == "on" && msg.author.username == "iggy"){
