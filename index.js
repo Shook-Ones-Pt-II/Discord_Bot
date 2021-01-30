@@ -2,7 +2,7 @@ const Discord = require('discord.js')
 require('dotenv').config()
 const getDATA = require('./APIs/getDATA')
 
-
+//this is arsany
 
 const bot = new Discord.Client()
 
