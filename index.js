@@ -15,14 +15,17 @@ bot.on('ready', () => {
 let annoying = false
 
 bot.on('message', async msg => {
+    if(msg.content.charAt(0) != "D"){
+        return
+    }
 
 
     let arr = msg.content.split(" ")
-    if(msg.content === "HELLO"){
+    if(msg.content === "DHELLO"){
         msg.reply("hello stoooopid beeep booop bop \n this messge comes from the organization")
     }
 
-    if(msg.content.split(" ")[0].toLowerCase() === "weather" && msg.content.split(" ").length > 1){
+    if(msg.content.split(" ")[0].toLowerCase() === "Dweather" && msg.content.split(" ").length > 1){
         let address = ""
 
         for(let i = 1; i < msg.content.split(" ").length; i++){
@@ -37,7 +40,7 @@ bot.on('message', async msg => {
         }
     }
 
-    if(arr[0] === "weather"){
+    if(arr[0] === "Dweather"){
         const loc = ""
         for(let i = 1; i < arr.length - 1; i++){
             loc += arr[i]
@@ -47,7 +50,7 @@ bot.on('message', async msg => {
     }
 
     if(arr.length >= 2){
-        if(arr[0].toLowerCase() == "bitcoin" && arr[1].toLowerCase() == "price"){
+        if(arr[0].toLowerCase() == "Dbitcoin" && arr[1].toLowerCase() == "price"){
             try{
 
                 const BitPrice = await getDATA.getBitcoin()
@@ -60,7 +63,7 @@ bot.on('message', async msg => {
         } 
     }
     if(arr.length >= 2){
-        if(arr[0].toLowerCase() == "chuck" && arr[1].toLowerCase() == "norris"){
+        if(arr[0].toLowerCase() == "Dchuck" && arr[1].toLowerCase() == "norris"){
             try{
 
                 const ChuckJoke = await getDATA.getChuckNorris()
@@ -72,7 +75,7 @@ bot.on('message', async msg => {
             }
         } 
     }
-    if(msg.content === "history"){
+    if(msg.content === "Dhistory"){
         try{
             const historyFact = await getDATA.getHistory()
             msg.reply(`${historyFact.text}`)
@@ -84,7 +87,7 @@ bot.on('message', async msg => {
 
     }
 
-    if(msg.content === "dog"){
+    if(msg.content === "Ddog"){
         try{
             const dogPicture = await getDATA.getDog()
             msg.reply(`${dogPicture.url}`)
@@ -95,7 +98,7 @@ bot.on('message', async msg => {
         }
     }
 
-    if(msg.content === "bored"){
+    if(msg.content === "Dbored"){
         try{
             const dogPicture = await getDATA.getBored()
             msg.reply(`${dogPicture.activity}`)
@@ -107,10 +110,10 @@ bot.on('message', async msg => {
 
     }
 
-    if(msg.content == "on" && msg.author.username == "iggy"){
+    if(msg.content == "Don" && msg.author.username == "iggy"){
         annoying = true
     }
-    if(msg.content == "off" && msg.author.username == "iggy"){
+    if(msg.content == "Doff" && msg.author.username == "iggy"){
         annoying = false
     }
 
@@ -120,7 +123,7 @@ bot.on('message', async msg => {
         msg.reply("shut yoo @$$ up dawg!")
     }
     
-    if(msg.content === "help"){
+    if(msg.content === "Dhelp"){
        msg.reply("\n\nHELLO: Greets you!\n\ndog: Shares random pictures of dogs\n\non/off: Activates annoy Dan/Stops annoy Dan\n\nbiscona: If annoy Dan is on, will tell dan to shut up\n\nhistory: Shares a random history fact\n\nchuck norris: Shares a random Chuck Norris joke\n\nbitcoin price: Provides current value of bitcoin in canadian currency\n\nweather <location>: Provides the weather for a given location")
     }
     
