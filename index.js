@@ -25,7 +25,7 @@ bot.on('message', async msg => {
         msg.reply("hello stoooopid beeep booop bop \n this messge comes from the organization")
     }
 
-    if(msg.content.split(" ")[0].toLowerCase() === "Dweather" && msg.content.split(" ").length > 1){
+    if(msg.content.split(" ")[0].toLowerCase() === "dweather" && msg.content.split(" ").length > 1){
         let address = ""
 
         for(let i = 1; i < msg.content.split(" ").length; i++){
@@ -46,7 +46,7 @@ bot.on('message', async msg => {
             loc += arr[i]
         }
 
-        //loc = await geocode(loc)
+        loc = await geocode(loc)
     }
 
     if(arr.length >= 2){
