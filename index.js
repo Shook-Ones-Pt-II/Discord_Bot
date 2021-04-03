@@ -32,8 +32,6 @@ bot.on('message', async msg => {
             address += msg.content.split(" ")[i]
         }
 
-        msg.reply("TESSSSSSSTing")
-
         try{
             const weatherData = await getDATA.getWeather(address)
             msg.reply(`The temperature is ${weatherData.temp}°C and there is a ${weatherData.precip * 100}% chance of precipitation`)
