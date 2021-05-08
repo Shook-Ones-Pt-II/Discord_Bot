@@ -1,6 +1,7 @@
 const Discord = require('discord.js')
 require('dotenv').config()
 const getDATA = require('./APIs/getDATA')
+const geocode = require('./APIs/weather/geocode')
 
 //this is arsany
 
