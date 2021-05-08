@@ -71,7 +71,7 @@ bot.on('message', async msg => {
 
             }catch(e){
                 console.log(e)
-                msg.reply("Chuck Norris joke not available :/")
+                msg.reply("Chuck Norris joke not available:/")
             }
         } 
     }
