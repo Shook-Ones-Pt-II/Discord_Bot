@@ -9,6 +9,8 @@ const bot = new Discord.Client()
 
 const token = process.env.API_KEY // use file io later with token.pass to hide token from git
 
+console.log(token)
+
 bot.on('ready', () => {
     console.log('this bot is online')
 })
